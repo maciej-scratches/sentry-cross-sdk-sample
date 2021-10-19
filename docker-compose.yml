@@ -1,0 +1,14 @@
+version: "3"
+services:
+  flask-app:
+    build: ./flask-app
+    ports:
+      - "5000:5000"
+    environment:
+      - SENTRY_DSN=https://b3b2de0d0edc42b68ef92da34132fd22@o420886.ingest.sentry.io/6007458
+  java-app:
+    build: ./java-app
+    ports:
+     - "8080:8080"
+    environment:
+      - SENTRY_DSN=https://6d4daa0772e94860868b5a3cd81ffd7e@o420886.ingest.sentry.io/6001200
